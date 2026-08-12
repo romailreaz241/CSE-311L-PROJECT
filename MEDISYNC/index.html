@@ -1,0 +1,128 @@
+<?php require_once __DIR__ . '/front_end_connection/bootstrap.php'; ?>
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title>MediSync — Book Medical Tests</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css"/>
+  <link rel="stylesheet" href="css/home.css"/>
+  <link rel="stylesheet" href="css/responsive.css"/>
+</head>
+
+<body>
+
+  <!-- NAV -->
+  <header class="container">
+    <nav class="glass-panel main-nav">
+
+      <div class="logo-wrap">
+        <div class="logo-badge">⚕</div>
+        <div class="logo-text">Medi<span>Sync</span></div>
+      </div>
+
+      <ul class="nav-links">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="departments.html">Tests</a></li>
+      </ul>
+
+      <div class="nav-actions" id="nav-actions">
+        <?= fc_nav_actions() ?>
+      </div>
+
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <main class="container">
+
+    <?= fc_flash_html() ?>
+
+    <section class="glass-panel hero-card">
+
+      <div class="hero-left">
+        <h1>Book <em>Medical Tests</em></h1>
+        <p>Smarter <span>·</span> Faster <span>·</span> Effortless</p>
+
+        <form class="search-wrap" method="get" action="departments.html">
+          <span>🔍</span>
+          <input id="search-input" name="q" type="text" placeholder="Search for tests…"/>
+          <button id="search-btn" type="submit">Search</button>
+        </form>
+      </div>
+
+      <div class="hero-right">
+        <div class="hero-abstract">
+          <div class="hero-shape one"></div>
+          <div class="hero-shape two"></div>
+        </div>
+      </div>
+
+    </section>
+
+    <section class="glass-panel category-preview-card">
+      <a href="departments.html" class="category-preview-link">Test Categories</a>
+    </section>
+
+  </main>
+
+  <!-- INFO BAND -->
+  <section class="info-band">
+    <div class="container info-grid">
+
+      <div>
+        <div class="info-label">Year Established</div>
+        <div class="info-value">2026</div>
+      </div>
+
+      <div>
+        <div class="info-label">Location</div>
+        <div class="info-value">DHAKA, BANGLADESH</div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+
+      <div>
+        <h4>Get in touch</h4>
+        <a href="#">support@medisync.com</a>
+        <a href="#">info@medisync.com</a>
+      </div>
+
+      <div>
+        <h4>Connect</h4>
+        <a href="#">Facebook</a>
+        <a href="#">Instagram</a>
+        <a href="#">LinkedIn</a>
+      </div>
+
+      <div>
+        <h4>Medical Services</h4>
+        <p>Dhanmondi, Dhaka</p>
+        <p>Bangladesh</p>
+      </div>
+
+      <div>
+        <h4>Support</h4>
+        <a href="#">FAQs</a>
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms &amp; Conditions</a>
+      </div>
+
+    </div>
+  </footer>
+
+  <script src="js/chatbot.js"></script>
+
+</body>
+</html>

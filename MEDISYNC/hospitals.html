@@ -1,0 +1,35 @@
+<?php require_once __DIR__ . '/front_end_connection/bootstrap.php'; ?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title>Hospitals — MediSync</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css"/>
+  <link rel="stylesheet" href="css/list-pages.css"/>
+  <link rel="stylesheet" href="css/responsive.css"/>
+</head>
+<body>
+  <header class="container glass-panel page-topbar">
+    <div class="left"><a class="glass-btn-sm" href="index.html">Home</a></div>
+    <h1 class="page-title">Hospitals</h1>
+    <div class="right" id="nav-actions-top"><?= fc_topbar_actions('<a class="glass-btn-sm" href="departments.html">Tests</a>') ?></div>
+  </header>
+
+  <main class="container page-section">
+    <section class="glass-panel list-panel">
+      <div class="list-stack">
+        <div class="glass-pill" style="justify-content:flex-start;gap:14px"><span>🏥</span>Bangladesh Medical College &amp; Hospital</div>
+        <div class="glass-pill" style="justify-content:flex-start;gap:14px"><span>🏥</span>Evercare Hospital</div>
+        <div class="glass-pill" style="justify-content:flex-start;gap:14px"><span>🏥</span>Ibn Sina Diagnostic &amp; Imaging Center</div>
+        <div class="glass-pill" style="justify-content:flex-start;gap:14px"><span>🏥</span>Medix Signature Clinic</div>
+        <div class="glass-pill" style="justify-content:flex-start;gap:14px"><span>🏥</span>Popular Diagnostic Centre</div>
+      </div>
+    </section>
+  </main>
+
+  <script src="js/chatbot.js"></script>
+</body>
+</html>

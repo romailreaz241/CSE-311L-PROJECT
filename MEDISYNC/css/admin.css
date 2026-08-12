@@ -1,0 +1,313 @@
+/* ============================================================
+   MediSync — admin.css
+   ============================================================ */
+
+.admin-main {
+  padding-top: 24px;
+  padding-bottom: 64px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+/* ── Stat cards row ──────────────────────────────────────── */
+.admin-stats-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+.admin-stat-card {
+  padding: 22px 24px;
+  border-top: 2px solid var(--accent);
+}
+.asc-label {
+  font-size: .68rem;
+  font-weight: 700;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: var(--accent);
+  opacity: .8;
+  margin-bottom: 10px;
+}
+.asc-val {
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: var(--text);
+  letter-spacing: -.04em;
+  line-height: 1;
+}
+.asc-name {
+  font-size: 1.1rem;
+  letter-spacing: -.01em;
+}
+.asc-actions {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.asc-jump {
+  background: rgba(41,196,217,.1);
+  border: 1px solid rgba(41,196,217,.25);
+  color: var(--accent);
+  border-radius: 999px;
+  padding: 7px 16px;
+  font-size: .8rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all .2s;
+  font-family: inherit;
+}
+.asc-jump:hover { background: rgba(41,196,217,.22); }
+
+/* ── Panel ───────────────────────────────────────────────── */
+.admin-panel {
+  padding: 28px 32px;
+}
+.admin-panel-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+.admin-panel-header h2 {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--text);
+}
+.admin-section-note {
+  font-size: .82rem;
+  color: var(--text-3);
+  line-height: 1.65;
+  margin-bottom: 20px;
+  padding: 10px 14px;
+  background: rgba(255,255,255,.03);
+  border-left: 2px solid rgba(41,196,217,.35);
+  border-radius: 0 var(--r) var(--r) 0;
+}
+.admin-section-note strong { color: var(--text-2); }
+
+/* ── Tables ──────────────────────────────────────────────── */
+.admin-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: .84rem;
+}
+.admin-table th {
+  background: rgba(41,196,217,.07);
+  color: var(--accent);
+  font-weight: 700;
+  padding: 11px 14px;
+  text-align: left;
+  border-bottom: 1px solid rgba(41,196,217,.18);
+  font-size: .75rem;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+.admin-table td {
+  padding: 10px 14px;
+  border-bottom: 1px solid var(--glass-border);
+  color: var(--text-2);
+  vertical-align: middle;
+}
+.admin-table tr:last-child td { border-bottom: none; }
+.admin-table tbody tr:hover td {
+  background: rgba(255,255,255,.02);
+  transition: background .15s;
+}
+
+/* ── Token badge ─────────────────────────────────────────── */
+.token-badge {
+  background: linear-gradient(135deg, var(--accent-d), #1a6dca);
+  color: #fff;
+  border-radius: 6px;
+  padding: 3px 10px;
+  font-weight: 700;
+  font-size: .76rem;
+  font-family: monospace;
+  letter-spacing: .06em;
+  display: inline-block;
+}
+
+/* ── Inline editable inputs (test editor table) ──────────── */
+.admin-inline-input {
+  background: var(--bg-3);
+  border: 1px solid var(--glass-border-l);
+  border-radius: 8px;
+  padding: 6px 10px;
+  font-size: .82rem;
+  color: var(--text);
+  font-family: inherit;
+  width: 100%;
+  min-width: 90px;
+  outline: none;
+  transition: border-color .2s, box-shadow .2s;
+}
+.admin-inline-input:focus {
+  border-color: rgba(41,196,217,.5);
+  box-shadow: 0 0 0 3px rgba(41,196,217,.08);
+}
+/* price input narrower */
+.admin-table td:nth-child(3) .admin-inline-input { min-width: 90px; max-width: 110px; }
+/* room input */
+.admin-table td:nth-child(4) .admin-inline-input { min-width: 110px; }
+/* floor input */
+.admin-table td:nth-child(5) .admin-inline-input { min-width: 130px; }
+
+/* ── Save button (per row) ───────────────────────────────── */
+.btn-save-test {
+  background: rgba(41,196,217,.12);
+  color: var(--accent);
+  border: 1px solid rgba(41,196,217,.28);
+  border-radius: var(--r);
+  padding: 6px 16px;
+  font-size: .79rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all .2s;
+  white-space: nowrap;
+  font-family: inherit;
+}
+.btn-save-test:hover { background: rgba(41,196,217,.22); }
+.btn-save-test:disabled { opacity: .4; cursor: not-allowed; }
+
+/* ── Mark Done button ────────────────────────────────────── */
+.btn-done {
+  background: rgba(52,211,153,.12);
+  color: var(--green);
+  border: 1px solid rgba(52,211,153,.28);
+  border-radius: var(--r);
+  padding: 6px 18px;
+  font-size: .79rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all .2s;
+  white-space: nowrap;
+  font-family: inherit;
+}
+.btn-done:hover { background: rgba(52,211,153,.22); }
+.btn-done:disabled { opacity: .4; cursor: not-allowed; }
+
+/* ── Empty / loading states ──────────────────────────────── */
+.admin-empty {
+  text-align: center;
+  padding: 52px 20px;
+  color: var(--text-3);
+  font-size: .88rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+.admin-empty span { font-size: 2.2rem; }
+
+/* ── Responsive ──────────────────────────────────────────── */
+@media (max-width: 768px) {
+  .admin-stats-row { grid-template-columns: 1fr 1fr; }
+  .admin-panel { padding: 20px 16px; }
+  .admin-table { font-size: .76rem; }
+  .admin-table th,
+  .admin-table td { padding: 8px 8px; }
+  .admin-inline-input { min-width: 70px; font-size: .76rem; }
+}
+@media (max-width: 480px) {
+  .admin-stats-row { grid-template-columns: 1fr; }
+}
+
+/* Mock-theme alignment for admin views. Logic and PHP-rendered markup remain unchanged. */
+.admin-main {
+  margin-top: 34px;
+  padding-bottom: 54px;
+  gap: 30px;
+}
+
+.admin-stats-row {
+  gap: 24px;
+}
+
+.admin-stat-card,
+.admin-panel {
+  background:
+    linear-gradient(180deg, rgba(47, 69, 104, 0.86) 0%, rgba(39, 58, 90, 0.80) 100%);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-panel);
+  box-shadow: var(--shadow-panel);
+  backdrop-filter: blur(16px) saturate(140%);
+  -webkit-backdrop-filter: blur(16px) saturate(140%);
+}
+
+.admin-stat-card {
+  padding: 30px 32px;
+  border-top: 1px solid var(--line);
+}
+
+.asc-label,
+.admin-table th {
+  color: #8dc5e9;
+}
+
+.asc-val {
+  color: var(--text);
+}
+
+.asc-jump,
+.btn-save-test,
+.btn-done,
+.token-badge {
+  border-radius: var(--radius-pill);
+  color: var(--text);
+  background:
+    linear-gradient(180deg, rgba(49, 69, 121, 0.68) 0%, rgba(26, 39, 84, 0.70) 100%);
+  border: 1px solid rgba(194, 225, 255, 0.16);
+  box-shadow: var(--shadow-btn);
+}
+
+.btn-done {
+  color: #dfffee;
+  border-color: rgba(126, 224, 181, 0.34);
+}
+
+.admin-panel {
+  padding: 34px 38px;
+}
+
+.admin-panel-header h2 {
+  font-size: 1.28rem;
+  font-weight: 800;
+}
+
+.admin-section-note {
+  color: rgba(247, 251, 255, 0.74);
+  background: rgba(29, 42, 97, 0.25);
+  border-left: 2px solid rgba(141, 197, 233, 0.5);
+  border-radius: 0 20px 20px 0;
+}
+
+.admin-table {
+  border-collapse: separate;
+  border-spacing: 0;
+}
+
+.admin-table th {
+  background: rgba(29, 42, 97, 0.30);
+  border-bottom: 1px solid rgba(201, 229, 255, 0.18);
+}
+
+.admin-table td {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.admin-table tbody tr:hover td {
+  background: rgba(255, 255, 255, 0.045);
+}
+
+.admin-inline-input {
+  color: var(--text);
+  background: rgba(29, 42, 97, 0.35);
+  border: 1px solid rgba(194, 225, 255, 0.14);
+  border-radius: 18px;
+}
+
+.admin-empty {
+  color: rgba(247, 251, 255, 0.74);
+}

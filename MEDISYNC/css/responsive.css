@@ -1,0 +1,144 @@
+@media (max-width: 1100px) {
+  .hero-card {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+
+  .card-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 34px;
+  }
+
+  .footer-grid,
+  .info-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .auth-row input {
+    width: 280px;
+  }
+}
+
+@media (max-width: 820px) {
+  .page-topbar {
+    grid-template-columns: 1fr;
+    gap: 14px;
+    padding: 20px;
+    border-radius: 34px;
+  }
+
+  .page-title {
+    font-size: 2.25rem;
+    order: -1;
+  }
+
+  .page-topbar .left,
+  .page-topbar .right {
+    justify-content: center;
+  }
+
+  .main-nav {
+    flex-direction: column;
+    gap: 18px;
+    padding: 20px;
+  }
+
+  .nav-links {
+    gap: 24px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .hero-card {
+    padding: 36px 24px;
+  }
+
+  .hero-left h1 {
+    font-size: 2.55rem;
+  }
+
+  .search-wrap {
+    width: 100%;
+  }
+
+  .card-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .auth-split {
+    grid-template-columns: 1fr;
+  }
+
+  .auth-row {
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
+    padding: 18px 22px;
+  }
+
+  .auth-row label {
+    white-space: normal;
+  }
+
+  .auth-row input {
+    width: 100%;
+  }
+
+  .footer-grid,
+  .info-grid {
+    grid-template-columns: 1fr;
+  }
+}
+@media (max-width: 820px) {
+  .nav-actions {
+    justify-content: center;
+  }
+
+  .search-mode-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .dept-search-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .test-item {
+    flex-direction: column;
+    align-items: stretch;
+    border-radius: 34px;
+  }
+
+  .test-item-right {
+    align-items: stretch;
+  }
+
+  .test-item-price {
+    text-align: left;
+  }
+
+  .admin-stats-row {
+    grid-template-columns: 1fr;
+  }
+
+  .admin-panel {
+    padding: 24px 18px;
+  }
+}
+
+@media (max-width: 520px) {
+  .glass-pill {
+    min-height: 72px;
+  }
+
+  .page-topbar .right {
+    flex-wrap: wrap;
+  }
+
+  .nav-cart-btn,
+  .nav-logout-btn,
+  .nav-admin-btn {
+    min-height: 38px;
+    padding: 8px 14px;
+  }
+}

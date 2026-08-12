@@ -1,0 +1,46 @@
+<?php require_once __DIR__ . '/front_end_connection/bootstrap.php'; ?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title>ENT — MediSync</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css"/>
+  <link rel="stylesheet" href="css/grid-pages.css"/>
+  <link rel="stylesheet" href="css/responsive.css"/>
+</head>
+<body>
+  <header class="container glass-panel page-topbar">
+    <div class="left"><a class="glass-btn-sm" href="departments.html">← Departments</a></div>
+    <h1 class="page-title">ENT</h1>
+    <div class="right" id="nav-actions-top"><?= fc_topbar_actions() ?></div>
+  </header>
+
+  <main class="container grid-section">
+    <section class="card-grid">
+      <a class="glass-panel category-card" href="ear.html">
+        <div class="icon-text">
+          <img src="icons/ear.png" alt="Ear Icon" class="category-icon"/>
+        </div>
+        <div class="glass-pill category-label">Ear</div>
+      </a>
+      <a class="glass-panel category-card" href="nose.html">
+        <div class="icon-text">
+          <img src="icons/nose.png" alt="Nose Icon" class="category-icon"/>
+        </div>
+        <div class="glass-pill category-label">Nose</div>
+      </a>
+      <a class="glass-panel category-card" href="throat.html">
+        <div class="icon-text">
+          <img src="icons/throat.png" alt="Throat Icon" class="category-icon"/>
+        </div>
+        <div class="glass-pill category-label">Throat</div>
+      </a>
+    </section>
+  </main>
+
+  <script src="js/chatbot.js"></script>
+</body>
+</html>

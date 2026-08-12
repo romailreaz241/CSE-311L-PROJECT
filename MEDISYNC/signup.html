@@ -1,0 +1,65 @@
+<?php require_once __DIR__ . '/front_end_connection/bootstrap.php'; ?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title>Sign Up — MediSync</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css"/>
+  <link rel="stylesheet" href="css/auth.css"/>
+  <link rel="stylesheet" href="css/responsive.css"/>
+</head>
+<body>
+
+  <header class="container glass-panel page-topbar">
+    <div class="left"><a class="glass-btn-sm" href="index.html">← Home</a></div>
+    <h1 class="page-title">Sign Up</h1>
+    <div class="right"></div>
+  </header>
+
+  <main class="container auth-page-main">
+    <section class="glass-panel auth-panel">
+      <div class="glass-pill auth-heading">Create New Account</div>
+
+      <form class="auth-form" method="post" action="front_end_connection/signup_handler.php">
+        <div class="auth-split">
+          <div class="auth-row">
+            <label for="signup-fname">First Name</label>
+            <input id="signup-fname" name="fname" type="text" placeholder="John" autocomplete="given-name" required/>
+          </div>
+          <div class="auth-row">
+            <label for="signup-lname">Last Name</label>
+            <input id="signup-lname" name="lname" type="text" placeholder="Doe" autocomplete="family-name" required/>
+          </div>
+        </div>
+
+        <div class="auth-row">
+          <label for="signup-phone">📱 Phone:</label>
+          <input id="signup-phone" name="phone" type="tel" placeholder="01XXXXXXXXX" autocomplete="tel" required/>
+        </div>
+        <div class="auth-row">
+          <label for="signup-age">🎂 Age:</label>
+          <input id="signup-age" name="age" type="number" placeholder="25" min="1" max="120" required/>
+        </div>
+        <div class="auth-row">
+          <label for="signup-pass">🔒 Password:</label>
+          <input id="signup-pass" name="password" type="password" placeholder="Min. 6 characters" autocomplete="new-password" required/>
+        </div>
+        <div class="auth-row">
+          <label for="signup-confirm">🔒 Confirm:</label>
+          <input id="signup-confirm" name="confirm_password" type="password" placeholder="Re-enter password" autocomplete="new-password" required/>
+        </div>
+
+        <?= fc_flash_html() ?>
+
+        <button id="signup-btn" class="glass-pill primary-action" type="submit">Sign Up</button>
+      </form>
+
+      <p class="auth-switch">Already have an account? <a href="login.html">Login</a></p>
+    </section>
+  </main>
+
+</body>
+</html>

@@ -1,0 +1,16 @@
+.auth-page-main {
+  margin-top: 54px;
+}
+
+.auth-page-main .auth-panel {
+  width: min(1200px, 100%);
+  margin: 0 auto;
+}
+/* Keep PHP form validation/error display visually aligned with the mock UI. */
+.auth-form .primary-action {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(194, 225, 255, 0.16);
+  cursor: pointer;
+}

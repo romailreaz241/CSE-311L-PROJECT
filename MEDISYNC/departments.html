@@ -1,0 +1,54 @@
+<?php require_once __DIR__ . '/front_end_connection/bootstrap.php'; ?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title>Departments — MediSync</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css"/>
+  <link rel="stylesheet" href="css/grid-pages.css"/>
+  <link rel="stylesheet" href="css/responsive.css"/>
+</head>
+<body>
+  <header class="container glass-panel page-topbar">
+    <div class="left"><a class="glass-btn-sm" href="index.html">Home</a></div>
+    <h1 class="page-title">Departments</h1>
+    <div class="right" id="nav-actions-top">
+<?= fc_topbar_actions('') ?>
+    </div>
+  </header>
+
+  <main class="container grid-section">
+    <section class="card-grid">
+      <a class="glass-panel category-card" href="general.html">
+        <div class="icon-text"><img src="icons/general.png" alt="General"></div>
+        <div class="category-label">General</div>
+      </a>
+      <a class="glass-panel category-card" href="heart.html">
+        <div class="icon-text"><img src="icons/heart.png" alt="Heart"></div>
+        <div class="category-label">Heart</div>
+      </a>
+      <a class="glass-panel category-card" href="liver.html">
+        <div class="icon-text"><img src="icons/liver.png" alt="Liver"></div>
+        <div class="category-label">Liver</div>
+      </a>
+      <a class="glass-panel category-card" href="gynecology.html">
+        <div class="icon-text"><img src="icons/gynecology.png" alt="Gynecology"></div>
+        <div class="category-label">Gynecology</div>
+      </a>
+      <a class="glass-panel category-card" href="kidney.html">
+        <div class="icon-text"><img src="icons/kidney.png" alt="Kidney"></div>
+        <div class="category-label">Kidney</div>
+      </a>
+      <a class="glass-panel category-card" href="ent.html">
+        <div class="icon-text"><img src="icons/ent.png" alt="ENT"></div>
+        <div class="category-label">ENT</div>
+      </a>
+    </section>
+  </main>
+
+  <script src="js/chatbot.js"></script>
+</body>
+</html>

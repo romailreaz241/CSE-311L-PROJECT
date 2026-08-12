@@ -1,0 +1,67 @@
+<?php require_once __DIR__ . '/front_end_connection/bootstrap.php'; fc_require_admin(); ?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title>Edit Tests — MediSync Admin</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css"/>
+  <link rel="stylesheet" href="css/admin.css"/>
+  <link rel="stylesheet" href="css/responsive.css"/>
+</head>
+<body>
+
+  <!-- TOPBAR -->
+  <header class="container glass-panel page-topbar">
+    <div class="left">
+      <a class="glass-btn-sm" href="admin.html">← Orders</a>
+    </div>
+    <h1 class="page-title">🧪 Edit Tests</h1>
+    <div class="right">
+      <a class="glass-btn-sm" href="front_end_connection/logout.php">Logout</a>
+    </div>
+  </header>
+
+  <main class="container admin-main">
+
+    <!-- STAT CARDS -->
+    <div class="admin-stats-row">
+      <div class="glass-panel admin-stat-card">
+        <div class="asc-label">Total Tests</div>
+        <div class="asc-val" id="stat-test-count"><?= fc_total_tests_count() ?></div>
+      </div>
+      <div class="glass-panel admin-stat-card">
+        <div class="asc-label">Logged in as</div>
+        <div class="asc-val asc-name" id="stat-admin-name"><?= fc_esc(fc_admin_name()) ?></div>
+      </div>
+      <div class="glass-panel admin-stat-card">
+        <div class="asc-label">Go to</div>
+        <div class="asc-actions">
+          <a class="asc-jump" href="admin.html">📋 Orders</a>
+          <a class="asc-jump" href="departments.html" style="margin-top:6px">🏥 Browse</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- TEST EDITOR -->
+    <section class="glass-panel admin-panel">
+      <div class="admin-panel-header">
+        <h2>🧪 Test Price &amp; Location Editor</h2>
+        <a class="glass-btn-sm" href="admin-tests.html">↻ Refresh</a>
+      </div>
+      <p class="admin-section-note">
+        Edit <strong>Price</strong>, <strong>Room</strong> and <strong>Floor</strong> directly in the table.
+        Press <strong>💾 Save</strong> on each row to apply changes instantly — changes go live immediately.
+      </p>
+      <div id="tests-wrap">
+        <?= fc_flash_html() ?>
+        <?= fc_render_admin_tests() ?>
+      </div>
+    </section>
+
+  </main>
+
+</body>
+</html>

@@ -1,0 +1,6 @@
+.grid-section {
+  margin-top: 56px;
+}
+.card-grid.three-only {
+  grid-template-columns: repeat(3, 1fr);
+}
